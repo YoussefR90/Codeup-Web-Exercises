@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    color: purple;
+    text-decoration: underline;
+}
+h2 {
+    color: Gold;
+    text-decoration: underline;
+}
+
+body{
+    background-color: gray;
+    background-image: url("../images/GitHub-Logos/GitHub_Logo_White.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+ul > li {
+    list-style: square;
+}
+* {
+    font-family: "Inconsolata", cursive;
+}
+td, tr{
+    padding: 10px;
+    font-size: 1em;
+}
+
+a:hover {
+    font-size: 3em;
+    color: white;
+    transition: 300ms;
+}
+a:visited {
+    color: red;
+}
+
