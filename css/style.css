@@ -1,16 +1,15 @@
 h1 {
     text-align: center;
-    color: purple;
-    text-decoration: underline;
 }
-h2 {
-    color: Gold;
+
+h1, h2{
+    color: #007069;
     text-decoration: underline;
 }
 
 body{
-    background-color: gray;
-    background-image: url("../images/GitHub-Logos/GitHub_Logo_White.png");
+    background-color: #333333;
+    background-image: url("../images/lowPolyBackground.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,22 +17,29 @@ body{
 }
 
 ul > li {
-    list-style: square;
+    list-style-type: square;
 }
+
 * {
-    font-family: "Inconsolata", cursive;
+    font-family: 'Indie Flower', cursive;
 }
-td, tr{
+
+td, tr {
     padding: 10px;
     font-size: 1em;
 }
 
-a:hover {
-    font-size: 3em;
-    color: white;
-    transition: 300ms;
-}
-a:visited {
-    color: red;
+a {
+    color: #333333;
+    transition: 500ms;
 }
 
+a:hover {
+    color: #eeeeee;
+    font-size: 1.2em;
+    transition: 500ms;
+}
+
+a:visited {
+    color: #ca3a11;
+}
