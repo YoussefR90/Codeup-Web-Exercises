@@ -1,3 +1,87 @@
-.media-body {
-    width: 100%
+* {box-sizing: border-box;}
+
+body {
+    background-color: #E6E6E6;
+    font-family: 'Abel', sans-serif;
 }
+
+a {
+    color: black;
+}
+h1,h2,h3,h4,h4,h6 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+h2 {
+    text-align: center;
+    font-size: 64px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 48px;
+}
+
+p.text-uppercase {
+    text-align: center;
+}
+.large-circles{
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+}
+h6 {
+    font-size: 1.5em;
+}
+.rounded-circle {
+    height: 105px;
+    width: 105px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0F0F0;
+}
+.rounded-circle.red{
+    background-color: #E6563B;
+
+}
+.rounded-circle.orange{
+    background-color: #EB9D3A;
+}
+.rounded-circle.green{
+    background-color: #7CB06C;
+}
+.rounded-circle.blue{
+    background-color: #00ABA9;
+}
+.logo {
+    width:105px;
+    heaight: 105px;
+}
+
+.span-dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+
+.red-dot {
+    background-color: #E6563B;
+}
+
+.orange-dot {
+    background-color: #EB9D3A;
+}
+
+.green-dot {
+    background-color: #7CB06C;
+}
+
+.blue-dot {
+    background-color: #00ABA9;
+}
+
+.logo img{
+    width:105px;
+}
+
