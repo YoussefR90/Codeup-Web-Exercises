@@ -24,29 +24,68 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button id="btn1">Click this</button>
+<button id="btn2">or this</button>
+<button id="btn3">wait, click this?</button>
+<button id="btn4">THIS!</button>
 <script>
     (function() {
         "use strict";
+        var btn1 = function (){
+            document.getElementById('main-header').innerHTML = "Javascript is Cool"
+        }
+        document.getElementById("btn1").addEventListener("click", btn1)
+
+
+        var btn2 = function () {
+            document.getElementById('sub-header').style.color = "blue"
+        }
+        document.getElementById("btn2").addEventListener("click", btn2)
+
+
+        var btn3 = function () {
+            let listItems = document.getElementsByTagName('li');
+            for (let i = 0; i < listItems.length; i = i + 2) {
+                listItems[i].style.color = "gray"
+            }
+        }
+        document.getElementById("btn3").addEventListener("click", btn3)
+
+
+        var btn4 = function (){
+            subParagraphs[0].innerText = "Mission Accomplished!"
+        }
+        document.getElementById("btn4").addEventListener("click", btn4)
+
         // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById('main-header') ;
+        // var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        document.getElementById('main-header').innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "Javascript is Cool"
+
         // TODO: Uncomment the next line and get the sub header element by id
-         var subHeader = document.getElementById('sub-header') ;
+        // var subHeader = document.querySelectorAll("sub-header");
+
         // TODO: Set the text color of subHeader to blue
-        document.getElementById('sub-header').style.color = "blue";
+        // subHeader.style.color = "blue"
+
         // TODO: Uncomment the next line and get all list items
-         var listItems = document.querySelectorAll('li');
         // TODO: Set text color on every other list item to grey
-        document.querySelectorAll('li:nth-child(odd)').forEach( e=> e.style.color = "gray");
+        // var listItems = document.getElementsByTagName('li');
+        // for (let i = 0; i < listItems.length; i = i + 2) {
+        //     listItems[i].style.color = "gray"
+        // }
+
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[0].style.color = "blue";
+        listItems[0].style.color = "blue"
+
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName('sub-paragraph')[0];
+        var subParagraphs = document.querySelectorAll("sub-paragraph");
+        subParagraphs[0].innerText = "Mission Accomplished!"
+
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs.innerText = "Mission Accomplished!"
+        subParagraphs[0].innerText = "Mission Accomplished!"
+
     })();
 </script>
 </body>

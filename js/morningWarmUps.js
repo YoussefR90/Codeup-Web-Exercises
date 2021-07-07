@@ -46,3 +46,30 @@ function capitalizeFirstLetter(stringsArray) {
 
 console.log('Capitalized');
 console.log(capitalizeFirstLetter(["bob","Seth","TOFU","Toyota"]));
+// July 7th 2021
+// TODO: Create a method on the object down below named getFullName that when called returns the users full name using the "this" key term.
+// Example: personOne.getFullName() ---- returns ----> "silvia floopertan"
+var personOne = {
+    firstName: "silvia",
+    lastName: "floopertan",
+    ageInYears: 34,
+    heightInInches: 65,
+    fullName: function getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+}; console.log(personOne.fullName());
+
+
+
+// TODO: Create a method on the object down below named getNicelyFormattedFullName that when called returns the
+//  users full name with both first letters in the names being capitalized look at example down below for more reference.
+// Example: personOne.getNicelyFormattedFullName() ---- returns ----> "Dan Valdarez"
+var personTwo = {
+    firstName: "dan",
+    lastName: "valdarez",
+    ageInYears: 61,
+    heightInInches: 73,
+    fullName: function getFullName() {
+        return this.firstName.charAt(0).toUpperCase() + " " + this.lastName.charAt(0).toUpperCase();
+    }
+}; console.log(personTwo.fullName());
