@@ -9,28 +9,70 @@
 
 <table id="products">
     <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refresh_button">Refresh</button>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-(function() {
-    "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    (function () {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-})();
+
+        $(document).ready(function () {
+
+            $.ajax("data/inventory.json", {
+                type: "GET",
+                dataType: "json"
+            })
+                .done(function (data) {
+                    // console.log(data);
+                    var html = "";
+                    $("#insertProducts").append(html);
+                    for (let i = 0; i < data.length; i++) {
+                        html = ("<tr><td>" + data[i].title + "</td><td>" + data[i].price + "</td>" + "<td>" + data[i].quantity + "</td>");
+
+                        $("#insertProducts").append(html);
+                    }
+                }).fail(function (error) {
+                console.log("Error object: " + error);
+            })
+        })
+
+
+        function pullData(data) {
+            $.ajax("data/inventory.json", {
+                type: "GET",
+                dataType: "json"
+            })
+                .done(function (data) {
+                    console.log(data);
+                    var html = "";
+                    for (let i = 0; i < data.length; i++) {
+                        html = ("<tr><td>" + data[i].title + "</td><td>" + data[i].price + "</td>" + "<td>" + data[i].quantity + "</td><td>" + data[i].categories + "</td>");
+                        console.log(data);
+                        $("#insertProducts").empty().append(html)
+                    }
+                });
+        }
+        setInterval(pullData, 3000)
+        $("#refresh_button").click(pullData());
+
+    })();
 </script>
 
 </body>
