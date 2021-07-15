@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <style>
-    .gone{
+    .hidden{
       visibility: hidden;
     }
     .highlight{
@@ -13,9 +13,6 @@
   </style>
 </head>
 <body>
-
-
-
 
 <dl>
   <dt>Name</dt>
@@ -36,28 +33,74 @@
   <dd class="invisible">red</dd>
 </dl>
 
-<a href="#" id="toggle-button">Click to toggle visibility.</a>
-<br>
+<!--https://www.nps.gov/aboutus/faqs.htm-->
+<h1>Frequently Asked Questions</h1>
 
-<a href="#" id="toggle-button2">Click to highlight.</a>
+<h2>About the National Park Service</h2>
 
-<script src="./js/jquery.js" ></script>
+<dl>
+  <dt>Who is the director of the National Park Service?</dt>
+  <dd>
+    Shawn Benge
+  </dd>
+  <dt>What government agency oversees the National Park Service?</dt>
+  <dd>
+  Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.
+  </dd>
+  <dt></dt>
+  <h3>How many employees are in the National Park Service?</h3>
+  <dd>
+    <ul>
+      <li>Permanent, temporary, and seasonal employees:</li>
+      <li>Approximately 20,000</li>
+      <li>Volunteers:</li>
+      <li>More than 279,000 in 2019</li>
+    </ul>
+  </dd>
+  <dt>How old is the National Park System?</dt>
+  <dd>
+    The National Park Service System was created August 25, 1916.
+  </dd>
+  <dt>What is the origin of the National Park Service arrowhead?</dt>
+  <dd>
+    The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.
+  </dd>
+  <dt>How many areas are in the National Park System?</dt>
+  <dd>
+    The system includes 423 areas
+  </dd>
+  <dt></dt>
+  <h3>What is the largest national park site? Smallest?</h3>
+  <dd>
+    <ul>
+      <li>Largest: Wrangell-St. Elias National Park and Preserve, AK </li>
+      <li>Smallest: Thaddeus Kosciuszko National Memorial, PA</li>
+    </ul>
+  </dd>
+  <dt>How many people visit the national parks?</dt>
+  <dd>
+    roughly 320 million a year
+  </dd>
+  <dt>What is the most-visited national park?</dt>
+  <dd>
+    <a href="https://www.nps.gov/aboutus/visitation-numbers.htm">View a list of the most-visited sites in the National Park Service.</a>
+  </dd>
+  <dt></dt>
+  <h3>Why do i enjoy national parks?</h3>
+  <dd>
+    <ul>
+      <li>a mind freeing experience</li>
+      <li>history buff</li>
+      <li>wildlife</li>
+      <li>something new to try</li>
+    </ul>
+  </dd>
+</dl>
+<button id="list-item-font-color" type="button">Click this!</button>
+<a href="#" id="toggle-visibility">and Click here to toggle definition visibility.</a>
 
-<script>
-  "use strict"
-  $(document).ready(function() {
-    $("#toggle-button").click(function(event) {
-      event.preventDefault();
-      $('.invisible').toggleClass('gone');
-    });
-  });
-
-  $(document).ready(function() {
-    $("#toggle-button2").click(function(event) {
-      event.preventDefault();
-      $('dt').toggleClass('highlight');
-    });
-  });
+<script src="/js/jquery.js" ></script>
+<script src="/jquery_exercises.js"></script>
 </script>
 </body>
 </html>
