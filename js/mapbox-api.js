@@ -1,42 +1,42 @@
 "use strict";
 
 
-mapboxgl.accessToken = mapboxAPIKey
+mapboxgl.accessToken = mapboxAPIKeY;
 
 var newMap = new mapboxgl.Map({
     container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-97.3322, 32.7518], // starting position [lng, lat]
-    zoom: 12 // starting zoom
+    style: 'mapbox://styles/youssefr90/ckr6ea0mv0nhc18pfhzzckhj3', // style URL
+    center: [-95.3698, 29.7604], // starting position [lng, lat]
+    zoom: 10 // starting zoom
 });
 
 var restaurants = [
     {
-        name: 'Pho District',
-        location: '2401 W 7th St, Fort Worth, TX',
-        dishes: 'Pho'
+        name: 'Pho Saigon',
+        location: '890 S Mason Rd, Katy TX',
+        dishes: 'Soup'
     },
     {
-        name: 'Velvet Taco',
-        location: '2700 W 7th St, Fort Worth, TX',
-        dishes: 'Tacos'
+        name: 'Ephesus Mediterranean Grill',
+        location: '510 S Mason Rd, Katy TX',
+        dishes: 'Greek and mediterranean'
     },
     {
-        name: 'Chipotle',
-        location: '3000 W 7th St Ste 110, Fort Worth, TX',
-        dishes: 'Burritos and Bowls'
+        name: 'OMG Burger!',
+        location: '1230 N Mason Rd, Katy Tx',
+        dishes: 'Burgers'
     }
 ];
 
-restaurants.forEach(function (restaurant){
-    geocode( restaurant.location, mapboxAPIKey).then(function (results){
+restaurants.forEach(function (restaurants){
+    geocode( restaurants.location, mapboxAPIKeY).then(function (results){
         var popup = new mapboxgl.Popup()
             .setHTML('<h6>'
-                + restaurant.name
+                + restaurants.name
                 +'<br>'
-                + restaurant.location
+                + restaurants.location
                 +'<br>'
-                + restaurant.dishes
+                + restaurants.dishes
                 + '</h6>')
 
         new mapboxgl.Marker({color: "orange"})
@@ -45,7 +45,13 @@ restaurants.forEach(function (restaurant){
             .addTo(newMap)
     })
 })
-    /**
+var zoomSelect = document.getElementById("zoom-select");
+$('#zoom-select').change(function(e){
+    console.log(e.target.value);
+    map.setZoom(e.target.value);
+});
+
+/**
 <--
 $('#zoom-select').change(function (){
     if(value=='5') {
