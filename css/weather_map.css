@@ -1,0 +1,29 @@
+html {
+    background-color: whitesmoke;
+}
+h1 {
+    color: Purple;
+}
+.word{
+    color: #4682b4;
+}
+
+#title {
+    font-size: 25px;
+}
+#city-text {
+    font-size: 9px;
+}
+#nav-bar {
+    background-color: #4682b4;
+}
+.card-text{
+    font-size: 9px;
+}
+.card-background {
+    background-color: #8126fa;
+}
+#list {
+    background-color: #cccccc;
+    color: #b380fa
+}
